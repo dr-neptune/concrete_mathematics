@@ -1,0 +1,11 @@
+#+TITLE: Chapter 1: Recurrent Problems
+
+* Towers of Hanoi
+
+In finding a closed form expression for some quantity of interest like $T_n$ we go through 3 stages:
+
+1. Look at small cases
+2. Find and prove a mathematical expression for the quantity of interest
+3. Find and prove a closed form for our expression
+
+* Lines in the Plane
