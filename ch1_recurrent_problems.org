@@ -9,3 +9,10 @@ In finding a closed form expression for some quantity of interest like $T_n$ we 
 3. Find and prove a closed form for our expression
 
 * Lines in the Plane
+
+Steiner Trees
+https://andrewpwheeler.com/2020/08/21/using-steiner-trees-to-select-a-subgraph-of-interest/
+https://www.dropbox.com/s/74rn51c0k1xkmab/SteinerTree.zip?dl=0
+https://algorist.com/problems/Steiner_Tree.html
+
+* The Josephus Problem
