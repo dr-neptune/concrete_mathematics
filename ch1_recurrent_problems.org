@@ -8,6 +8,8 @@ In finding a closed form expression for some quantity of interest like $T_n$ we 
 2. Find and prove a mathematical expression for the quantity of interest
 3. Find and prove a closed form for our expression
 
+Maybe: [[https://issuu.com/grdjournals/docs/12][An efficient implementation of tower of hanoi using gray codes]]
+
 * Lines in the Plane
 
 Steiner Trees
@@ -16,3 +18,4 @@ https://www.dropbox.com/s/74rn51c0k1xkmab/SteinerTree.zip?dl=0
 https://algorist.com/problems/Steiner_Tree.html
 
 * The Josephus Problem
+maybe a program to find all the fixed point solutions to the josephus problem using bit-shift operations
