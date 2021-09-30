@@ -21,4 +21,4 @@ https://algorist.com/problems/Steiner_Tree.html
 maybe a program to find all the fixed point solutions to the josephus problem using bit-shift operations
 
 * Warmups
-On problem 4
+On problem 8
