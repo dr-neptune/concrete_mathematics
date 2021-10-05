@@ -45,3 +45,21 @@ Given $S_n = \Sigma_{0 \leq k \leq n} a_k$
 $S_n + a_{n + 1} = a_0 + \Sigma_{0 \leq k \leq n}a_{k + 1}$
 
 * Multiple Sums
+
+** Interchanging the Order of Summation
+
+$\Sigma_j \Sigma_k a_{j, k} [P(j, k)] = \Sigma_{P(j, k)} a_{j,k} = \Sigma_k \Sigma_j a_{j, k} [P(j, k)]$
+
+** General Distributive Law
+
+$\Sigma_{j \in J, k \in K} a_j b_k = (\Sigma_{j \in J} a_j)(\Sigma_{k \in K} b_k)$
+
+** Order of Summation
+
+*** Vanilla
+
+$\Sigma_{j \in J}\Sigma_{k \in K} a_{j, k} = \Sigma_{j \in J, k \in K} a_{j,k} = \Sigma_{k \in K}\Sigma_{j \in J} a_{j, k}$
+
+*** Rocky Road
+
+Applies when the range of an inner sum depends on an index variable of the outer sum
