@@ -1,0 +1,47 @@
+#+TITLE: Chapter 2: Sums
+
+* Notation
+
+Iverson introduced an interesting notation for describing a strong predicate on a value in a sum:
+
+$\Sigma_k a_k [P(k)]$
+
+if $[P(k)]$ is false or $a_k$ is undefined, the term $a_k [P(k)]$ is also zero, so we can safely include it among the terms being summed.
+
+* Sums and Recurrences
+
+wee doggy, lots going on here. Check the videos from snugglyhappymathtime
+
+* Manipulation of Sums
+
+** Distributive Law
+
+$\Sigma_{k \in K} c a_k = c\Sigma_{k \in K} a_k$
+
+** Associative Law
+
+$\Sigma_{k \in K} (a_k + b_k) = \Sigma_{k \in K} a_k + \Sigma_{k \in K} b_k$
+
+** Commutative Law
+
+$\Sigma_{k \in K} a_k = \Sigma_{p(k) \in K} a_{p(k)}$
+
+Where $p(k)$ means we can partition the terms in any way we please. $p(k)$ is any permutation of the set of *all* integers
+
+For every integer $n$, there should be exactly 1 integer $k$ such that $p(k) = n$
+
+** Combining Different Sets of Indices
+
+if $K$ and $K'$ are any sets of integers, then
+
+$\Sigma_{k \in K} a_k + \Sigma_{k \in K'} a_k = \Sigma_{k \in K \cap K'} a_k + \Sigma_{k \in K \cup K'} a_k$
+
+** Perturbation Method
+
+The operation of splitting off a term is the basis of a *perturbation method* that often allows us to evaluate a sum in closed form
+
+Given $S_n = \Sigma_{0 \leq k \leq n} a_k$
+
+$S_n + a_{n + 1} = a_0 + \Sigma_{0 \leq k \leq n}a_{k + 1}$
+
+* Multiple Sums
