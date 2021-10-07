@@ -98,3 +98,10 @@ $\Sigma_{j \in J} a_{f(j)} = \Sigma_{f(j) \in K} a_{f(j)} = \Sigma_{k \in K} a_k
 $\Sigma_{0 \leq k < n} H_k = nH_n - n$
 
 * General Methods
+On Build a Repertoire
+
+Reviewing repertoire method
+
+Skipping repertoire method. Will ask during book club
+
+on replace sums by integrals
