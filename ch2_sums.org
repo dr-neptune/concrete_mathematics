@@ -63,3 +63,38 @@ $\Sigma_{j \in J}\Sigma_{k \in K} a_{j, k} = \Sigma_{j \in J, k \in K} a_{j,k} =
 *** Rocky Road
 
 Applies when the range of an inner sum depends on an index variable of the outer sum
+
+$\Sigma_{j \in J}\Sigma_{k \in K(j)} a_{j, k} = \Sigma_{k \in K'}\Sigma_{j \in J'(k)} a_{j, k}$
+
+*** General Case
+
+$(\Sigma_{k=1}^n a_k)(\Sigma_{k=1}^n b_k) = n \Sigma_{k=1}^n a_k b_k - \Sigma_{1 \leq j < k \leq n} (a_k - a_j)(b_k - b_j)$
+
+*** Chebyshev's Monotonic Inequalities
+$(\Sigma_{k=1}^n a_k)(\Sigma_{k=1}^n b_k) \leq n \Sigma_{k=1}^n a_k b_k$ if $a_1 \leq ... \leq a_n$ and $b_1 \leq ... \leq b_n$
+
+$(\Sigma_{k=1}^n a_k)(\Sigma_{k=1}^n b_k) \geq n \Sigma_{k=1}^n a_k b_k$ if $a_1 \leq ... \leq a_n$ and $b_1 \geq ... \geq b_n$
+
+** Index Replacement
+
+What if we replace $k$ by $f(j)$ where $f: J \to K$ that takes an integer $j \in J$ into an integer $f(j) \in K$?
+
+The general formula for index replacement is
+
+$\Sigma_{j \in J} a_{f(j)} = \Sigma_{k \in K} a_k \# f^{-}(k)$
+
+where $\#f^{-}(k)$ stands for the number of elements in the set $f^{-}(k) = \{j | f(j) = k\}$, that is, the number of values $j \in J$ such that $f(j) = k$
+
+Alternatively:
+
+$\Sigma_{a_{f(j)}} = \Sigma_{j \in J, k \in K} a_k [f(j) = k] = \Sigma_{k \in K} a_k \Sigma_{j \in J} [f(j) = k]$
+
+In the special case that $f$ is a one to one correspondence between $J$ and $K$, the general formula reduces to
+
+$\Sigma_{j \in J} a_{f(j)} = \Sigma_{f(j) \in K} a_{f(j)} = \Sigma_{k \in K} a_k$
+
+*** Identity
+
+$\Sigma_{0 \leq k < n} H_k = nH_n - n$
+
+* General Methods
