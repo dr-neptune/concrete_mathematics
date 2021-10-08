@@ -106,4 +106,42 @@ Skipping repertoire method. Will ask during book club
 
 * Finite and Infinite Calculus
 
-On derivative analog for finite calculus
+Finite calculus is based on the properties of the difference operator, $\Delta$, defined by:
+
+$\Delta f(x) = f(x + 1) - f(x)$
+
+This is essentially the derivative, but with $h = 1$ being fixed
+
+There is a type of "mth" power that makes finite calculus interesting:
+
+Falling Factorial Powers:
+
+$x^{\underline{m}} = x(x - 1)...(x - m + 1)$
+
+Rising Factorial Powers:
+
+$x^{\overline{m}} = x(x + 1)...(x + m - 1)$
+
+When $m = 0$, we have $x^{\underline{0}} = x^{\overline{0}} = 1$
+
+The finite calculus has a handy law to match $D(x^m) = m x^{m - 1}$:
+
+$\Delta(x^{\underline{m}}) = m x^{\underline{m - 1}}$
+
+Analogously, $\Delta$ has an inverse, the anti-difference (or summation) operator $\Sigma$; and there's another Fundamental Theorem:
+
+$g(x) = \Delta f(x) \iff \Sigma g(x) \delta x = f(x) + C$
+
+Here, $\Sigma g(x) \delta x$, the indefinite sum of $g(x)$ is the class of functions whose difference is $g(x)$
+
+Just as infinite calculus has definite integrals, finite calculus has definite sums:
+
+if $g(x) = Df(x)$, then
+
+$\Sigma_a^b g(x) \delta x = f(x) \rvert_a^b = f(b) - f(a)$
+
+where
+
+$\Sigma_a^b g(x) \delta x = \Sigma_{k = a}^{b - 1} g(k) = \Sigma_{a \leq k < b} g(k)$
+
+In other words, the definite sum is the same as an ordinary sum with limits, but excluding the value at the upper limit
