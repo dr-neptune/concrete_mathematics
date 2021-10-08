@@ -104,4 +104,6 @@ Reviewing repertoire method
 
 Skipping repertoire method. Will ask during book club
 
-on replace sums by integrals
+* Finite and Infinite Calculus
+
+On derivative analog for finite calculus
