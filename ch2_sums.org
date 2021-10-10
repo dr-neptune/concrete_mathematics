@@ -145,3 +145,19 @@ where
 $\Sigma_a^b g(x) \delta x = \Sigma_{k = a}^{b - 1} g(k) = \Sigma_{a \leq k < b} g(k)$
 
 In other words, the definite sum is the same as an ordinary sum with limits, but excluding the value at the upper limit
+
+$\Sigma_a^b g(x) \delta x + \Sigma_b^c g(x) \delta x = \Sigma_a^c g(x) \delta x$
+
+Integration with falling factorials:
+
+$\Sigma_{0 \leq k < n} k^{\underline{m}} = \frac{k^{\underline{m + 1}}}{m + 1} \rvert_0^n = \frac{n^{\underline{m + 1}}}{m + 1}$
+
+
+*** Additional Properties
+
+$x^{\underline{n}} = \frac{x}{x^{\overline{n}}}$
+
+$x^{\underline{m + n}} = x^{\underline{m}} (x - m)^{\underline{n}}$
+
+$\Sigma_a^b x^{\underline{m}} \delta x = \frac{x^{\underline{m + 1}}}{m + 1} \rvert_a^b$ if $m \neq -1$
+$\Sigma_a^b x^{\underline{m}} \delta x = H_x \rvert_a^b$ if $m = -1$
