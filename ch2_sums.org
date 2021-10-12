@@ -161,3 +161,29 @@ $x^{\underline{m + n}} = x^{\underline{m}} (x - m)^{\underline{n}}$
 
 $\Sigma_a^b x^{\underline{m}} \delta x = \frac{x^{\underline{m + 1}}}{m + 1} \rvert_a^b$ if $m \neq -1$
 $\Sigma_a^b x^{\underline{m}} \delta x = H_x \rvert_a^b$ if $m = -1$
+
+*** Useful Difference Table
+
+
+#+DOWNLOADED: screenshot @ 2021-10-11 11:43:47
+[[file:Finite_and_Infinite_Calculus/2021-10-11_11-43-47_screenshot.png]]
+
+*** Summation By Parts
+
+$\Delta (u(x)v(x)) = u(x)\Delta v(x) + v(x + 1) \Delta u(x)$
+
+This can be put into a convenient form using the shift operator $E$, defined by $E f(x) = f(x + 1)$
+
+$\Delta (uv) = u \Delta v + E v \Delta u$
+
+$\Sigma u \Delta v = uv - \Sigma Ev \Delta u$
+
+* Infinite Sums
+
+Let $A^+ = \Sigma_{k \in K} a_k^+$ and $A^- = \Sigma_{k \in K} a_k^-$.
+
+If $A^+, A^-$ are both finite, the sum $\Sigma_{k \in K} a_k$ is said to *converge absolutely* to the value $A = A^+ + A^-$
+If $A^+ = \infty$ and $A^-$ is finite, the sum diverges to $\infty$ and vice versa with $- \infty$.
+If $A^+ = A^- = \infty$, all bets are off
+
+In other words, absolute convergence means that the sum of absolute values converges
