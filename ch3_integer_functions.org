@@ -1,1 +1,42 @@
 #+TITLE: Chapter 3: Integer Functions
+
+* Floors and Ceilings
+
+$\left \lceil{x}\right \rceil$ = the least integer greater than or equal to $x$
+
+$\left \lfloor{x}\right \rfloor$ = the greatest integer less than or equal to $x$
+
+$x - 1 < \left\lfloor{x}\right\rfloor \leq x \leq \left\lceil{x}\right\rceil < x + 1$
+
+$\left\lfloor{-x}\right\rfloor = - \left\lceil{x}\right\rceil$
+
+For proving properties about the floor and ceiling functions, the following four rules are especially useful:
+
+$\left\lfloor{x}\right\rfloor = n \iff n \leq x < n + 1$
+
+$\left\lfloor{x}\right\rfloor = n \iff x - 1 < n \leq x$
+
+$\left\lceil{x}\right\rceil = n \iff n - 1 < x \leq n$
+
+$\left\lceil{x}\right\rceil = n \iff x \leq n < x + 1$
+
+It's possible to move an integer term in or out of a floor (or ceiling):
+
+$\left\lfloor{x + n}\right\rfloor = \left\lfloor{x}\right\rfloor + n$
+
+There are many situations in which floor and ceiling brackets are redundant, so that we can insert or delete them at will
+
+$x < n \iff \left\lfloor{x}\right\rfloor < n$
+
+$n < x \iff n < \left\lceil{x}\right\rceil$
+
+$x \leq n \iff \left\lceil{x}\right\rceil \leq n$
+
+$n \leq x \iff n \leq \left\lfloor{x}\right\rfloor$
+
+The difference between $x$ and $\left\lfloor{x}\right\rfloor$ is called the *fractional part* of x:
+
+$\{x\} = x - \left\lfloor{x}\right\rfloor$
+
+
+* Floor/Ceiling Applications
