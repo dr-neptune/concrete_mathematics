@@ -44,3 +44,5 @@ $\{x\} = x - \left\lfloor{x}\right\rfloor$
 $\left\lfloor{f(x)}\right\rfloor = \left\lfloor{f(\left\lfloor{x}\right\rfloor)}\right\rfloor$ and $\left\lceil{f(x)}\right\rceil = \left\lceil{f(\left\lceil{x}\right\rceil)}\right\rceil$
 
 $\left\lfloor{\frac{x + m}{n}}\right\rfloor = \left\lfloor{\frac{\left\lfloor{x}\right\rfloor + m}{n}}\right\rfloor$ and $\left\lceil{\frac{x + m}{n}}\right\rceil = \left\lceil{\frac{\left\lceil{x}\right\rceil + m}{n}}\right\rceil$ if m and n are integers and the denominator n is positive
+
+* Floor/Ceiling Recurrences
