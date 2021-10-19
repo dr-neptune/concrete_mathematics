@@ -48,3 +48,33 @@ $\left\lfloor{\frac{x + m}{n}}\right\rfloor = \left\lfloor{\frac{\left\lfloor{x}
 * Floor/Ceiling Recurrences
 
 $n = \left\lceil{n/2}\right\rceil + \left\lfloor{n/2}\right\rfloor$
+
+* Mod: The Binary Operation
+
+$n = m \left\lfloor{n/m}\right\rfloor + n \mod m$
+
+$n \mod m = n - m \left\lfloor{n/m}\right\rfloor$
+
+$n \mod 0 = n$
+
+$x \mathrm{mumble} y = y\left\lceil{x/y}\right\rceil - x$
+
+Distributive Law:
+
+$c (x \mod y) = (cx) \mod (cy)$
+
+Identity to express the partition of n into m as-equal-as-possible parts in nondecreasing order
+
+$n = \left\lceil{\frac{n}{m}}\right\rceil + \left\lceil{\frac{n - 1}{m}}\right\rceil + ... + \left\lceil{\frac{n - m + 1}{m}}\right\rceil$
+
+If we wanted the parts to be in nondecreasing order, with the small groups coming before the larger ones, we could use:
+
+$n = \left\lfloor{\frac{n}{m}}\right\rfloor + \left\lfloor{\frac{n + 1}{m}}\right\rfloor + ... + \left\lfloor{\frac{n + m - 1}{m}}\right\rfloor$
+
+And if we wish to replace $n$ by $mx$
+
+$\left\lfloor{mx}\right\rfloor = \left\lfloor{x}\right\rfloor + \left\lfloor{x + \frac{1}{m}}\right\rfloor + ... + \left\lfloor{x + \frac{m - 1}{m}}\right\rfloor$
+
+* Floor/Ceiling Sums
+
+$\Sigma_{0 \leq k < n} \left\lfloor{\sqrt{k}}\right\rfloor = na - \frac{1}{3}a^3 - \frac{1}{2}a^2 - \frac{1}{6}a$ where $a = \left\lfloor{\sqrt{n}}\right\rfloor$
