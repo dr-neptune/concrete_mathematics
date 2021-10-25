@@ -1,0 +1,39 @@
+#+TITLE: Chapter 4: Number Theory
+
+* Divisibility
+
+** Definition: m divides n
+
+$m\n \iff m > 0$ and $n = mk$ for some integer $k$
+
+** Greatest Common Divisor
+
+$\mathrm{gcd}(m,n) = \max\{k | k|m \mathrm{ and } k|n\}$
+
+** Least Common Multiple
+
+$\mathrm{lcm}(m, n) = \min\{k | k > 0, m | k and n | k\}$
+
+** Euclid's Algorithm
+
+$\gcd(0, n) = n$
+$\gcd(m, n) = \gcd(n \mod m, m)$ for $m > 0$
+
+#+begin_src python
+def euclids_algo(m: int, n: int) -> int:
+    if m < 0:
+        return 0
+    if m == 0:
+        return n
+    else:
+        new_m = n % m
+        return euclids_algo(new_m, m)
+
+
+euclids_algo(12, 18)
+euclids_algo(226, 430)
+#+end_src
+
+We can also extend it so that it will compute integers $m', n'$ satisfying:
+
+$m'm + n'n = \gcd(m, n)$
