@@ -96,3 +96,9 @@ $k = \mathrm{lcm}(m, n) \iff k_p = \max(m_p, n_p)$ for all $p$
 ** Euclid Numbers
 
 $e_n = e_1 e_2 ... e_{n - 1} + 1$ when $n \geq 1$
+
+Alternatively stated
+
+$e_n = 1 + \Pi_{i = 1}^n p_i = 1 + p_n \#$
+
+where $p_n \#$ is the primorial
