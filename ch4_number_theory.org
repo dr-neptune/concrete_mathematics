@@ -37,3 +37,62 @@ euclids_algo(226, 430)
 We can also extend it so that it will compute integers $m', n'$ satisfying:
 
 $m'm + n'n = \gcd(m, n)$
+
+** Mini-theorem
+
+$k|m$ and $k|n \iff k | \gcd(m, n)$
+
+** Sum Rule
+
+$\Sigma_{m | n} a_m = \Sigma_{m | n} a_{n / m}$ where $n > 0, n \in \mathcal{N}$
+
+** More General Sum Rule
+
+$\Sigma_{m|n} a_m = \Sigma_k \Sigma_{m > 0} a_m [n = mk]$
+
+** Interchanging Double Sums
+
+$\Sigma_{m | n} \Sigma_{k | m} a_{k, m} = \Sigma_{k | n} \Sigma_{l | (n / k)} a_{k, kl}$
+
+* Primes
+
+A positive integer $p$ is called a prime if it has just 2 divisors, namely 1 and $p$.
+
+** Fundamental Theorem of Arithmetic
+
+Any positive integer $n$ can be written as a product of primes
+
+$n = p_1 ... p_m = \Pi_{k = 1}^m p_k$ where $p_1 \leq ... \leq p_m$
+
+moreover, the expansion above is unique
+
+** Another Formulation of the Fundamental Theorem of Arithmetic
+
+Every positive integer can be written uniquely in the form:
+
+$n = \Pi_p p^{n_p}$ where each $n^p \geq 0$
+
+
+The Formula above represents $n$ uniquely, so we can think of the sequence $<n_2, n_3, n_5, ...>$ as a number system for positive integers.
+
+For example, the prime-exponent representation of 18 is $<1,2, 0, 0, ...>$ and the prime-exponent representation of 12 is $<2, 1, 0, 0, ...>$
+
+** Prime-Exponent Multiplication
+
+$k = mn \iff k_p = m_p + n_p$ for all $p$
+
+** With Division
+
+$m|n \iff m_p \leq n_p$ for all $p$
+
+** Min and Max Trick
+
+$k = \gcd(m, n) \iff k_p = \min(m_p, n_p)$ for all $p$
+
+$k = \mathrm{lcm}(m, n) \iff k_p = \max(m_p, n_p)$ for all $p$
+
+* Prime Examples
+
+** Euclid Numbers
+
+$e_n = e_1 e_2 ... e_{n - 1} + 1$ when $n \geq 1$
