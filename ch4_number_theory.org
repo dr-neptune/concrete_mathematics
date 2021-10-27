@@ -101,4 +101,19 @@ Alternatively stated
 
 $e_n = 1 + \Pi_{i = 1}^n p_i = 1 + p_n \#$
 
-where $p_n \#$ is the primorial
+where $p_n \#$ is the primorial (product of primes over the index)
+
+Not all Euclid Numbers are prime, but they are all relatively prime to each other.
+That is,
+
+$\gcd(e_m, e_n) = 1$ when $m \neq n$
+
+** Mersenne Numbers
+
+Mersenne Numbers are numbers of the form $2^p - 1$
+
+** Prime Number Theorem
+
+$\pi(x) \sim \frac{x}{\ln x}$
+
+* Factorial Factors
