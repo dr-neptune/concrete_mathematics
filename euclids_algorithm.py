@@ -1,7 +1,7 @@
 from typing import List, Tuple
 from pprint import pprint
 from random import randint
-from math import floor, log
+from math import floor, log, factorial
 
 def euclids_algo(m: int, n: int) -> int:
     if m < 0:
@@ -131,3 +131,18 @@ y = sieve_of_eratosthenes(1000000)
 x = list(range(1, len(y) + 1))
 plt.plot(x, y)
 plt.show()
+
+
+def ruler_function(n, p, exp=1,sum=0):
+    fl = floor(n / p**exp)
+    if fl > 0:
+        print(f"n: {n} p: {p} fl: {fl}")
+        sum += fl
+        exp += 1
+        return ruler_function(n, p, exp, sum)
+    else:
+        return sum
+
+ruler_function(10, 2)
+ruler_function(100, 2)
+ruler_function(100, 3)

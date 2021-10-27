@@ -117,3 +117,25 @@ Mersenne Numbers are numbers of the form $2^p - 1$
 $\pi(x) \sim \frac{x}{\ln x}$
 
 * Factorial Factors
+
+** Factorial
+
+$n! = 1 \cdot 2 \cdot ... \cdot n = \Pi_{k=1}^n k$ for integer $n \geq 0$
+
+** Factorial Growth is Exponential
+
+$n^{n/2} \leq n! \leq \frac{(n + 1)^n}{2^n}$
+
+** Stirling's Formula
+
+$n! \sim \sqrt{2 \pi n}(\frac{n}{e})^n$
+
+** Ruler Function
+
+$\epsilon_p (n!) = \Sigma_{k \geq 1} \left\lfloor{\frac{n}{p^k}}\right\rfloor$
+
+** Binarized Ruler Function
+
+$\epsilon_2 (n!) = n - \nu_2(n)$
+
+where $\nu_2(n)$ is the number of 1s in the binary representation of n.
