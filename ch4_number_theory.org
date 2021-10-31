@@ -139,3 +139,49 @@ $\epsilon_p (n!) = \Sigma_{k \geq 1} \left\lfloor{\frac{n}{p^k}}\right\rfloor$
 $\epsilon_2 (n!) = n - \nu_2(n)$
 
 where $\nu_2(n)$ is the number of 1s in the binary representation of n.
+
+* Relative Primality
+
+** Relatively Prime Notation
+
+$m \perp n \iff$ $m, n \in \mathcal{Z}$ and $\gcd(m, n) = 1$
+
+** Division by gcd leads to relatively prime outputs
+
+$m / \gcd(m, n) \perp n / \gcd(m, n)$
+
+** Relative Primality w.r.t Prime Exponents
+
+Where a prime exponent is this notation $<2, 1, 0, 0, ...>$ for 12
+
+$m \perp n \iff \min(m_p, n_p) = 0$ for all $p$
+
+Since $m_p, n_p$ are both non-negative, we can rewrite this as
+
+$m \perp n \iff m_p n_p = 0$ for all $p$
+
+** Split and Combine 2 $\perp$ relations with the same left-hand side
+
+$k \perp m$ and $k \perp n \iff k \perp m n$
+
+** Stern Brocot Tree
+
+There is a beautiful way to construct the set of all nonnegative fractions $m/n$ with $m \perp n$ called the Stern-Brocot tree.
+
+The idea is to start with 2 fractions $(\frac{0}{1}, \frac{1}{0})$ and then repeat the following operation as many times as desired:
+
+Insert $\frac{m + m'}{n + n'}$ between the two adjacent fractions $\frac{m}{n}$ and $\frac{m'}{n'}$
+
+The new fraction inserted is called the mediant.
+
+
+#+DOWNLOADED: screenshot @ 2021-10-31 17:00:43
+[[file:Relative_Primality/2021-10-31_17-00-43_screenshot.png]]
+
+** The Farey Series of Order N
+
+The Farey Series of order N is the set of all reduced fractions between 0 and 1 whose denominators are N or less, arranged in increasing order.
+
+$\mathcal{F}_6 = \frac{0}{1}, \frac{1}{6}, \frac{1}{5}, \frac{1}{4}, \frac{1}{3}, \frac{2}{5}, \frac{1}{2}, \frac{3}{5}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \frac{1}{1}$
+
+We can obtain $\mathcal{F}_N$ in general by starting with $\frac{0}{1}, \frac{1}{1}$ and then inserting mediants whenever it's possible to do so without getting a denominator that is too large. We don't miss any fractions in this way, because we know that the Stern-Brocot construction doesn't miss any, and because a mediant with denominator $\leq N$ is never formed from a fraction whose denominator is $> N$. In other words, $\mathcal{F}_N$ defines a subtree of the Stern-Brocot tree, obtained by pruning off unwanted branches.
