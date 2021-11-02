@@ -244,3 +244,15 @@ $a \equiv b \mod m \iff a \equiv b \mod p^{m_p}$ for all $p$
 if the prime factorization of $m$ is $\Pi_p p^{m_p}$
 
 * Independent Residues
+
+** Residue Number System
+
+$\mathrm{Res}(x) = (x \mod m_1, ..., x \mod m_r)$ if $m_j \perp m_k$ for $1 \leq j < k \leq r$
+
+Knowing $\mathrm{Res}(x)$ doesn't tell us everything about $x$, but it does allow us to determine $x \mod m$ where $m = m_1 ... m_r$
+
+
+#+DOWNLOADED: screenshot @ 2021-11-02 19:10:08
+[[file:Independent_Residues/2021-11-02_19-10-08_screenshot.png]]
+
+* Additional Applications
