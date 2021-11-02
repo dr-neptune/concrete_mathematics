@@ -185,3 +185,62 @@ The Farey Series of order N is the set of all reduced fractions between 0 and 1 
 $\mathcal{F}_6 = \frac{0}{1}, \frac{1}{6}, \frac{1}{5}, \frac{1}{4}, \frac{1}{3}, \frac{2}{5}, \frac{1}{2}, \frac{3}{5}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \frac{1}{1}$
 
 We can obtain $\mathcal{F}_N$ in general by starting with $\frac{0}{1}, \frac{1}{1}$ and then inserting mediants whenever it's possible to do so without getting a denominator that is too large. We don't miss any fractions in this way, because we know that the Stern-Brocot construction doesn't miss any, and because a mediant with denominator $\leq N$ is never formed from a fraction whose denominator is $> N$. In other words, $\mathcal{F}_N$ defines a subtree of the Stern-Brocot tree, obtained by pruning off unwanted branches.
+
+* Mod: The Congruence Relation
+
+** Congruence Relation
+
+$a \equiv b \mod(m) \iff a \mod m = b \mod m$
+
+Alternatively, we can understand congruences in another way:
+
+$a \equiv b \mod m \iff a - b$ is a multiple of $m$
+
+** Basic Operations
+
+Addition and Subtraction hold
+Multiplication holds if $b, c \in \mathcal{Z}$ for $a \equiv b$ and $c \equiv d \to ab \equiv cd$
+When multiplication holds, exponentiation holds
+Division *does not* hold
+
+** Cancellation with Congruences
+
+If $d, m$ are coprime, then:
+
+$ad \equiv bd \iff a \equiv b \mod m$ where $a, b, d, m \in \mathcal{Z}$ and $d \perp m$
+
+** Division Carried To the Modulus
+
+$ad \equiv bd \mod md \iff a \equiv b \mod m$ for $d \neq 0$
+
+This works for all real $a, b, d, m$ since it only relies on the distributive law
+
+** General Division Law for Mod
+
+$ad \equiv bd \mod m \iff a \equiv b \mod (\frac{m}{\gcd(d, m)})$ where $a, b, d, m \in \mathcal{Z}$
+
+** Changing the Modulus
+
+$a \equiv b \mod md \to a \equiv b \mod m$ where $d \in \mathcal{Z}$
+
+
+For example, if we know that $a \equiv b$ modulo 12 and 18, then we can safely conclude that $a \equiv b \mod 36$
+If $a - b$ is a common multiple of $m, n$, it is a multiple of lcm$(m, n)$. This follows from the principle of unique factorization
+
+** Special Case where $m \perp n$
+
+This is important because lcm$(m, n) = mn$ when $m$ and $n$ are relatively prime.
+
+$a \equiv b \mod (mn) \iff a \equiv b \mod(m)$ and $a \equiv b \mod (n)$ if $m \perp n$
+
+This is a special case of the *Chinese Remainder Theorem*
+
+** Decomposition of Moduli into Coprime Factors
+
+The moduli $m$ and $n$ can be decomposed into relatively prime factors until every distinct prime has been isolated
+
+$a \equiv b \mod m \iff a \equiv b \mod p^{m_p}$ for all $p$
+
+if the prime factorization of $m$ is $\Pi_p p^{m_p}$
+
+* Independent Residues

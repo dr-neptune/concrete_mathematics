@@ -146,3 +146,35 @@ def ruler_function(n, p, exp=1,sum=0):
 ruler_function(10, 2)
 ruler_function(100, 2)
 ruler_function(100, 3)
+
+def stern_brocot_fraction(m, n):
+    if m == n:
+        return
+    if m < n:
+        print('L')
+        return stern_brocot_fraction(m, n - m)
+    else:
+        print('R')
+        return stern_brocot_fraction(m - n, n)
+
+stern_brocot_fraction(5, 7)   # LRRL
+stern_brocot_fraction(1, 700) # all L
+stern_brocot_fraction(12, 1)  # all R
+
+# some of the examples for deducing fractions in the book
+stern_brocot_fraction(299, 110)
+stern_brocot_fraction(878, 323)
+
+def stern_brocot_infinite_representation_truncated(alpha, times=100):
+    if times == 0:
+        return
+    if alpha < 1:
+        print('L')
+        stern_brocot_infinite_representation_truncated(alpha / (1 - alpha), times - 1)
+    else:
+        print('R')
+        stern_brocot_infinite_representation_truncated(alpha - 1, times - 1)
+
+stern_brocot_infinite_representation_truncated(2.71828182845904523536028747135266249775724709369995)
+# 1000 hits maximum recursion depth for python :/
+stern_brocot_infinite_representation_truncated(1) # RLLLL...
