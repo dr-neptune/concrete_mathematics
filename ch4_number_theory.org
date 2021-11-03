@@ -256,3 +256,22 @@ Knowing $\mathrm{Res}(x)$ doesn't tell us everything about $x$, but it does allo
 [[file:Independent_Residues/2021-11-02_19-10-08_screenshot.png]]
 
 * Additional Applications
+
+** Modulo Cycles
+
+The $m$ numbers $0 \mod m, n \mod m, 2n \mod m, ..., (m - 1) n \mod m$ consist of precisely $d$ copies of the $m/d$ numbers $0, d, 2d, ..., m - d$
+in some order, where $d = \gcd(m, n)$
+
+** Fermat's Little Theorem
+
+$n^{p - 1} \equiv 1 \mod p$ if $n \perp p$
+
+Alternatively
+
+$n^p \equiv n \mod p$
+
+** Wilson's Theorem
+
+$(n - 1)! \equiv -1 \mod n \iff n \in \mathcal{P}, n > 1$
+
+* Phi and Mu
