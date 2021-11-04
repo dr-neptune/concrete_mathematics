@@ -275,3 +275,23 @@ $n^p \equiv n \mod p$
 $(n - 1)! \equiv -1 \mod n \iff n \in \mathcal{P}, n > 1$
 
 * Phi and Mu
+
+** Euler's Generalization of Fermat's Little Theorem
+
+$n^{\varphi(m)} \equiv 1 \mod m$ if $m \perp n$
+
+** Multiplicative
+
+A function $f(m)$ if positive integers is called multiplicative if $f(1) = 1$ and $f(m_1m_2) = f(m_1)f(m_2)$ whenever $m_1 \perp m_2$
+
+** General Formula for Multiplicativity
+
+A multiplicative function is defined completely by its values at prime powers, because we can decompose any positive integer $m$ into its prime power factors, which are relatively prime to each other.
+
+$f(m) = \Pi_p f(p^{m_p})$ if $m = \Pi_p p^{m_p}$
+
+where $f$ is multiplicative
+
+** Eulers Totient Function for General $m$
+
+$\varphi(m) = \Pi_{p \mod m} p^{m_p} - p^{m_p - 1} = m \Pi_{p \mod m} (1 - \frac{1}{p})$
