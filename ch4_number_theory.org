@@ -305,3 +305,40 @@ $\Sigma_{d / m} \varphi (d) = m$
 The Mobius function $\mu(m)$ can be defined for all integers $m \geq 1$ by the equation
 
 $\Sigma_{d \ m} \mu(d) = [m = 1]$
+
+When $m = p^k$
+
+$\mu(m) = \Pi_{p / m}\mu{p^{m_p}} = (-1)^r$ if $m = p_1 p_2 ... p_r$ or $0$ if $m$ is divisible by some $p^2$
+
+** Dedekind-Liouville Rule
+
+$\varphi (m) = \Sigma_{d / m} \mu(d) \frac{m}{d}$
+
+** Number of Fractions in the Farey Series $\mathcal{F}_n$
+
+$\Phi(x) = \Sigma_{1 \leq k \leq x} \varphi(k) + 1$
+
+
+** Identity for $\Phi(x)$
+
+$\Sigma_{d \geq 1} \Phi(\frac{x}{d}) = \frac{1}{2}\left\lfloor{x}\right\rfloor\left\lfloor{1 + x}\right\rfloor$
+
+** Recursive Property of the Mobius Function
+
+$g(x) = \Sigma_{d \geq 1} f(x / d) \iff f(x) = \Sigma_{d \geq 1} \mu(d) g(x / d)$
+
+** Identity Solved for $\Phi(x)$
+
+$\Phi(x) = \frac{1}{2} \Sigma_{d \geq 1} \mu(d)\left\lfloor{x/d}\right\rfloor\left\lfloor{1 + x/d}\right\rfloor$
+
+** MacMahon's Formula
+
+$N(m, n) = \frac{1}{m}\Sigma_{d / m} n^d \varphi(\frac{m}{d}) = \frac{1}{m}\Sigma_{d / m}\varphi(d)n^{m / d}$
+
+** MacMahon's Sum is an Integer
+
+$\Sigma_{d / m} \varphi(d) n^{m / d} \equiv 0 \mod m$
+
+** Exponents of Prime Factors
+
+$n^{p^k} \equiv n^{p^{k - 1}} \mod p^k$ for $k > 0$
