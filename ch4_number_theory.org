@@ -295,3 +295,13 @@ where $f$ is multiplicative
 ** Eulers Totient Function for General $m$
 
 $\varphi(m) = \Pi_{p \mod m} p^{m_p} - p^{m_p - 1} = m \Pi_{p \mod m} (1 - \frac{1}{p})$
+
+** Sum Decomposition of Euler's Totient Function for General $m$
+
+$\Sigma_{d / m} \varphi (d) = m$
+
+** The Mobius Function
+
+The Mobius function $\mu(m)$ can be defined for all integers $m \geq 1$ by the equation
+
+$\Sigma_{d \ m} \mu(d) = [m = 1]$
