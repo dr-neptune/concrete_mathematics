@@ -1,0 +1,51 @@
+#+TITLE: Chapter 5: Binomial Coefficients
+
+* Basic Identities
+
+** Binomial Coefficient Definition
+
+${r \choose k} = \frac{r(r-1)...(r - k + 1)}{k(k - 1)...(1)} = \frac{r^{\underline{k}}}{k!}$ if $k \geq 0$, $0$ otherwise
+
+This definition has several noteworthy features:
+
+1. The letter $r$ emphasizes the fact that binomial coefficients make sense when any real number appears in this position
+2. We can view $(\frac{r}{k})$ as a kth degree polynomial in r
+3. We haven't defined binomial coefficients for noninteger lower indices.
+
+** Binomial Coefficient with Factorials
+
+ ${n \choose k} = \frac{n!}{k!(n - k)!}$ where $n \geq k \geq 0$
+
+** Symmetry Identity
+
+${n \choose k} = {n \choose n - k}$
+
+for integers $n, k, n \geq 0$
+
+** Absorption Identity
+
+${r \choose k} = \frac{r}{k}{r - 1 \choose k - 1}$ where $k \neq 0$
+
+Alternatively, we can use the following that works even when $k = 0$
+
+$k{r \choose k} = r{r - 1 \choose k - 1}$
+
+We can even do one where we keep the lower index intact
+
+$(r - k){r \choose k} = r{r - 1 \choose k}$
+
+** Addition Formula
+
+${r \choose k} = {r - 1 \choose k} + {r - 1 \choose k - 1}$ where $k \in \mathcal{Z}$
+
+** Expansion from the Highest Index
+
+$\Sigma_{k \leq n} {r + k \choose k} = {r \choose 0} + {r + 1 \choose 1} + ... + {r + n \choose n} = {r + n + 1 \choose n}$
+
+** Expansion from the Lowest Index
+
+$\Sigma_{k \leq n} {k \choose m} = {0 \choose m} + {1 \choose m} + ... + {n \choose m} = {n + 1 \choose m + 1}$
+
+** Indefinite Summation Formula
+
+$\Sigma {x \choose m} \delta x = {x \choose m + 1} + C$

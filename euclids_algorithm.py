@@ -178,3 +178,14 @@ def stern_brocot_infinite_representation_truncated(alpha, times=100):
 stern_brocot_infinite_representation_truncated(2.71828182845904523536028747135266249775724709369995)
 # 1000 hits maximum recursion depth for python :/
 stern_brocot_infinite_representation_truncated(1) # RLLLL...
+
+
+# problem 8
+for x in range(1, 10000):
+    for y in range(1, 10000):
+        lhs = 10 * x + y
+        rhs = x % 3
+        rhs2 = y % 5
+        rhs = int(''.join([str(rhs), str(rhs2)]))
+        if lhs == rhs:
+            print(f"Found a solution: {lhs} == {rhs}")
