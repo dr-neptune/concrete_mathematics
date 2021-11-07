@@ -49,3 +49,47 @@ $\Sigma_{k \leq n} {k \choose m} = {0 \choose m} + {1 \choose m} + ... + {n \cho
 ** Indefinite Summation Formula
 
 $\Sigma {x \choose m} \delta x = {x \choose m + 1} + C$
+
+** Binomial Theorem
+
+$(x + y)^r = \Sigma_k {r \choose k} x^ky^{r - k}$ where $r \in \mathcal{Z}, r \geq 0$ or $|x/y| < 1$
+
+** Binomial Theorem for Special Case $y = 1$ and $r$ is not a non-negative integer
+
+$(1 + z)^r = \Sigma_k {r \choose k} z^k$ where $|z| < 1$
+
+** Pascal's Triangle for Negative $n$
+
+${r \choose k} = (-1)^k{k - r - 1 \choose k}$
+
+The transformation above is called /negating the upper index/
+
+** Moving Quantities between Upper and Lower Index Positions
+
+$(-1)^m{-n -1 \choose m} = (-1)^n{-m - 1 \choose n}$
+
+** Partial Sum of the rth row of Pascal's Triangle, if the row has been given alternating signs
+
+$\Sigma_{k \leq m} {r \choose k}(-1)^k = (-1)^m{r - 1 \choose m}$
+
+** Partial Sum of the Row Elements if they have been multiplied by their distance from the center
+
+$\Sigma_{k \leq m}{r \choose k}(\frac{r}{2} - k) = \frac{m + 1}{2}{r \choose m + 1}$
+
+** Identity
+
+$\Sigma_{k \leq m}{m + r \choose k}x^ky^{m - k} = \Sigma_{k \leq m}{-r \choose k}(-x)^k(x + y)^{m - k}$
+
+** Combinatorial Formula for $2^m$
+
+$\Sigma_{k \leq m}{m + k \choose k}2^{-k} = 2^m$
+
+** Rule for Simplifying the Product of 2 Binomial Coefficients
+
+${r \choose m}{m \choose k} = {r \choose k}{r - k \choose m - k}$
+
+The special case for $k = 1$ is the absorption identity
+
+The LHS uses $m$ twice, whereas the RHS uses $m$ once. This is a handy transformation to use before summing on $m$
+
+Left off on trinomial theorem
