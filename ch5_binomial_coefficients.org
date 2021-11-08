@@ -92,4 +92,22 @@ The special case for $k = 1$ is the absorption identity
 
 The LHS uses $m$ twice, whereas the RHS uses $m$ once. This is a handy transformation to use before summing on $m$
 
-Left off on trinomial theorem
+** Trinomial Coefficient
+
+${a + b + c \choose a, b, c} = \frac{(a + b + c)!}{a!b!c!}$
+
+** Trinomial Theorem
+
+$(x + y + z)^n = \Sigma_{0 \leq a,b,c \leq n, a + b + c = n} \frac{(a + b + c)!}{a!b!c!}x^ay^bz^c = \Sigma_{0 \leq a,b,c \leq n, a + b + c = n} {a + b + c \choose b + c}{b + c \choose c} x^ay^bz^c$
+
+** Multinomial Coefficients
+
+${a_1 + a_2 + ... + a_m \choose a_1, a_2, ..., a_m} = \frac{(a_1 + a_2 + ... + a_m)!}{a_1!a_2!...a_m!} = {a_1 + a_2 + ... + a_m \choose a_2 + ... + a_m} ... {a_{m - 1} + a_m \choose a_m}$
+
+** Vandermonde's Convolution
+
+$\Sigma_k {r \choose m + k}{s \choose n - k} = {r + s \choose m + n}$
+
+There are some other hairier identities for sums on trinomial and multinomial coefficients that I didn't write down
+
+* Basic Practice
