@@ -38,7 +38,7 @@ $(r - k){r \choose k} = r{r - 1 \choose k}$
 
 ${r \choose k} = {r - 1 \choose k} + {r - 1 \choose k - 1}$ where $k \in \mathcal{Z}$
 
-** Expansion from the Highest Index
+** Expansion from the Highest Index (parallel summation identity)
 
 $\Sigma_{k \leq n} {r + k \choose k} = {r \choose 0} + {r + 1 \choose 1} + ... + {r + n \choose n} = {r + n + 1 \choose n}$
 
@@ -111,3 +111,5 @@ $\Sigma_k {r \choose m + k}{s \choose n - k} = {r + s \choose m + n}$
 There are some other hairier identities for sums on trinomial and multinomial coefficients that I didn't write down
 
 * Basic Practice
+
+On problem 3
