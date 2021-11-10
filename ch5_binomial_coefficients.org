@@ -112,4 +112,14 @@ There are some other hairier identities for sums on trinomial and multinomial co
 
 * Basic Practice
 
-On problem 3
+On problem 7
+
+** Identity for Division of Same Indexed Binomial Coefficients
+
+$\Sigma_{j = 0}^m {m \choose j} {r \choose j}^{-1} = \frac{r + 1}{r + 1 - m}$
+
+where $m \in \mathcal{Z}^{+}$ and $r \notin \{0, 1, ..., m - 1\}$
+
+* Tricks of the Trade
+
+** Trick 1: Going Halves
