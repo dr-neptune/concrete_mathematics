@@ -123,3 +123,67 @@ where $m \in \mathcal{Z}^{+}$ and $r \notin \{0, 1, ..., m - 1\}$
 * Tricks of the Trade
 
 ** Trick 1: Going Halves
+
+*** Duplication Formula (5.34)
+
+$r^{\underline{k}}(r - \frac{1}{2})^{\underline{k}} = (2r)^{\underline{2k}}/2^{2k}$
+
+*** Duplication Identity (5.35)
+
+${r \choose k} {r - 1/2 \choose k} = {2r \choose 2k} {2k \choose k} / 2^{2k}$
+
+*** Duplication Identity with k = r = n (5.36)
+
+${n - 1/2 \choose n} = {2n \choose n} / 2^{2n}$
+
+*** Duplication Identity with Negation of Upper Index (5.37)
+
+${-1/2 \choose n} = (\frac{-1}{4})^n {2n \choose n}$
+
+*** Corollary to (5.35)
+
+$\Sigma_k {n \choose 2k} {2k \choose k} 2^{-2k} = {n - 1/2 \choose \left\lfloor{n/2}\right\rfloor}$
+
+*** Property of the Middle Elements of Pascal's Triangle
+
+$\Sigma_k {2k \choose k} {2n - 2k \choose n - k} = 4^n$
+
+** Trick 2: High-Order Differences
+
+*** High-Order Difference Operation (5.40)
+
+$\Delta^n f(x) = \Sigma_k {n \choose k} (-1)^{n - k}f(x + k)$
+
+*** Partial Fraction Expansion of $n! / (x (x + 1) ... (x + n))$ (5.41)
+
+$\Sigma_k {n \choose k} \frac{(-1)^k}{x + k} = x^{-1} {x + n \choose n}^{-1}$
+
+*** Newton Series
+
+Any polynomical can be represented as a sum of multiples of binomial coefficients
+
+$f(x) = c_d {x \choose d} + c_{d - 1} {x \choose d - 1} + ... + c_1 {x \choose 1} + c_0 {x \choose 0}$
+
+where $c_k = k!b_k$ for $0 \leq k \leq d$
+
+The nth difference of a Newton series is
+
+$\Delta^n f(x) = c_d {x \choose d - n} + c_{d - 1} {n \choose d - 1 - n} + ... + c_1 {x \choose 1 - n} + c_0 {x \choose - n}$
+
+*** Alternating polynomial sum (5.42)
+
+$\Sigma_k {n \choose k} (-1)^k (a_0 + a_1 k + ... + a_n k^n) = (-1)^n n! a_n$
+
+*** Sum Identity (5.43)
+
+$\Sigma_k {n \choose k} {r - sk \choose n} (-1)^k = s^n$
+
+*** $\Delta^n f(0) = c_n$ in the infinite case (5.44)
+
+$f(x) = f(0){x \choose 0} + \Delta f(0) {x \choose 1} + \Delta^2 f(0) {x \choose 2} + \Delta^3 f(0) {x \choose 3}$ + ...
+
+*** Newton Series Analogue to Taylor Series (5.45)
+
+$g(a + x) = \frac{g(a)}{0!}x^{\underline{0}} + \frac{\Delta g(a)}{1!}x^{\underline{1}} + \frac{\Delta^2 g(a)}{2!}x^{\underline{2}}$ + ...
+
+** Trick 3: Inversion
