@@ -187,3 +187,51 @@ $f(x) = f(0){x \choose 0} + \Delta f(0) {x \choose 1} + \Delta^2 f(0) {x \choose
 $g(a + x) = \frac{g(a)}{0!}x^{\underline{0}} + \frac{\Delta g(a)}{1!}x^{\underline{1}} + \frac{\Delta^2 g(a)}{2!}x^{\underline{2}}$ + ...
 
 ** Trick 3: Inversion
+
+*** Inversion Formula (5.48)
+
+$g(n) = \Sigma_k {n \choose k}(-1)^kf(k) \iff f(n) = \Sigma_k {n \choose k}(-1)^kg(k)$
+
+The dual relationship between $f$ and $g$ is called an inversion formula
+
+*** Subfactorial formulation of factorial (5.49)
+
+$n! = \Sigma_k h(n, k) = \Sigma_k {n \choose k}(n - k)_i = \Sigma_k {n \choose k} k_i$
+
+where i is the subfactorial function
+
+*** Subfactorial Summation Almost Closed Form (5.50)
+
+$n_i = n! \Sigma_{0 \leq k \leq n} \frac{(-1)^k}{k!}$
+
+*** Subfactorial Summation Closed Form (5.51)
+
+$n_i = \left\lfloor{\frac{n!}{e} + \frac{1}{2}}\right\rfloor + [n = 0]$
+
+* 5.4 | Generating Functions
+
+** Power Series (5.52)
+
+An infinite sequence $<a_0, a_1, a_2, ...>$ that we wish to deal with in some way can conveniently be represented as a power series in an auxiliary variable z,
+
+$A(z) = a_0 + a_1z + a_2z^2 + ... = \Sigma_{k \geq 0} a_k z^k$
+
+** Notation: Coefficient of a Power Series (5.53)
+
+$[z^n]A(z) = a_n$
+
+or, in other words $[z^n]A(z)$ is the coefficient of $z^n$ in $A(z)$
+
+** Convolution of Sequences (5.54)
+
+If we wish to evaluate any sum that has the general form
+
+$c_n = \Sigma_{k = 0}^n a_k b_{n - k}$
+
+and if we know the generating functions $A(z), B(z)$ we have
+
+$c_n = [z^n]A(z)B(z)$
+
+The sequence $<c_n>$ defined by above is called the convolution of the sequences $<a_n>, <b_n>$; two sequences are convolved by forming the sums of all products whose subscripts add up to a given amount.
+
+The gist is that convolution of sequences corresponds to multiplication of their generating functions
