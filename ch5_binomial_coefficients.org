@@ -235,3 +235,47 @@ $c_n = [z^n]A(z)B(z)$
 The sequence $<c_n>$ defined by above is called the convolution of the sequences $<a_n>, <b_n>$; two sequences are convolved by forming the sums of all products whose subscripts add up to a given amount.
 
 The gist is that convolution of sequences corresponds to multiplication of their generating functions
+
+** Another Convolution Identity (5.55)
+
+$\Sigma_{k = 0}^n {r \choose k} {r \choose n - k}(-1)^k = (-1)^{n/2}{r \choose n/2}[n \mathrm{even}]$
+
+** Fixed Lower Index Varying Upper Index Identities (5.56, 5.57)
+
+$\frac{1}{(1 - z)^{n + 1}} = \Sigma_{k \geq 0} {n + k \choose n}z^k$
+
+$\frac{z^n}{(1 - z)^{n + 1}} = \Sigma_{k \geq 0} {k \choose n}z^k$
+
+** Generalized Binomial Series & Generalized Exponential Series (5.58)
+
+$\mathcal{B}_t(z) = \Sigma_{x \geq 0} (tk)^{\underline{k - 1}}\frac{z^k}{k!}$
+
+$\mathcal{E}_t(z) = \Sigma_{k \geq 0} (tk + 1)^{k - 1} \frac{z^k}{k!}$
+
+** Identities of Generalized Binomial/Exponential Series (5.59 - 5.65)
+
+$\mathcal{B}_t(z)^{1 - t} - \mathcal{B}_t(z)^{-t} = z$
+
+$\mathcal{E}_t(z)^{-t} \ln \mathcal{E}_t(z) = z$
+
+
+#+DOWNLOADED: screenshot @ 2021-11-19 09:05:38
+[[file:5.4_|_Generating_Functions/2021-11-19_09-05-38_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2021-11-19 09:05:46
+[[file:5.4_|_Generating_Functions/2021-11-19_09-05-46_screenshot.png]]
+
+** $\mathcal{E}_1$ (5.66)
+
+$\mathcal{E}(z) = \Sigma_{k \geq 0} z^k = \frac{1}{1 - z}$
+
+** Generalized Exponential Series Identity (5.67)
+
+$\mathcal{E}(z) = e^{z \mathcal{E}(z)}$
+
+** Generalized Binomial with t = 2, t = -1 (5.68 - 5.73)
+
+
+#+DOWNLOADED: screenshot @ 2021-11-19 09:10:33
+[[file:5.4_|_Generating_Functions/2021-11-19_09-10-33_screenshot.png]]
