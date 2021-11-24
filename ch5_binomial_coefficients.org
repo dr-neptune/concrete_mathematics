@@ -279,3 +279,52 @@ $\mathcal{E}(z) = e^{z \mathcal{E}(z)}$
 
 #+DOWNLOADED: screenshot @ 2021-11-19 09:10:33
 [[file:5.4_|_Generating_Functions/2021-11-19_09-10-33_screenshot.png]]
+
+** Catalan Numbers
+
+The coefficients ${2n \choose n}\frac{1}{n+1}$ of $\mathcal{B}_2(z)$ are called Catalan numbers $C_n$
+
+where the sequence begins as follows:
+
+$C_n = 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796$, ...
+
+* Hypergeometric Functions
+
+It's natural to ask if there is a unifying principle that will systematically handle a great variety of binomial coefficient summations all at once. The answer is yes, and it is based on the theory of certain infinite sums called *hypergeometric series*
+
+** Hypergeometric Series (5.76)
+
+The hypergeometric series is a power series in $z$ with $m + n$ parameters. Below is an attempted latex representation with rising factorial powers:
+
+$F({a_1, ..., a_m \choose b_1, ..., b_m}|z) = \Sigma_{k \geq 0} \frac{a_1^{\overline{k}} ... a_m^{\overline{k}}}{b_1^{\overline{k}} ... b_m^{\overline{k}}} \frac{z^k}{k!}$
+
+To avoid division by 0, none of the b's may be 0 or a negative integer
+
+The notation
+
+$F(a_1,..., a_m;b_1, ..., b_m; z)$ is also used as an alternative
+
+The a's are called upper arguments, the b's are called lower arguments, the z is called the argument
+
+** Closed Form for m = 1, n = 0 (5.77)
+
+$F(a, 1; 1; z) = \frac{1}{(1 - z)^a}$
+
+** Modified Bessel Function of order b - 1 (5.78)
+
+$F(1; b, 1; z) = \Sigma_{k \geq 0} \frac{(b - 1)!}{(b - 1 + k)!} \frac{z^k}{k!}  = I_{b - 1}(z \sqrt(z)) \frac{(b - 1)!}{z^{(b - 1)/2}}$
+
+** Confluent Hypergeometric Series (m = n = 1) (5.79)
+
+$F(a;b;z) = \Sigma_{k \geq 0}\frac{a^{\overline{k}}}{b^{\overline{k}}}\frac{z^k}{k!} = M(a, b, z)$
+
+** Gaussian Hypergeometric Series (5.80)
+
+$F(a,b;c;z) = \Sigma_{k \geq 0}\frac{a^{\overline{k}}b^{\overline{k}}z^k}{c^{\overline{k}}k!}$
+
+** Rational Function of k (5.81)
+
+$\frac{t_{k + 1}}{t_{k}} = \frac{(k + a_1)...(k + a_m)z}{(k + b_1)...(k + b_n)(k + 1)}$
+
+This is the rational function of k, that is, a quotient of polynomials in k.
+The hypergeometric series are precisely those series whose first term is 1 and whose term ratio t-k+1/t-k is a rational function of k
