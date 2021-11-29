@@ -328,3 +328,44 @@ $\frac{t_{k + 1}}{t_{k}} = \frac{(k + a_1)...(k + a_m)z}{(k + b_1)...(k + b_n)(k
 
 This is the rational function of k, that is, a quotient of polynomials in k.
 The hypergeometric series are precisely those series whose first term is 1 and whose term ratio t-k+1/t-k is a rational function of k
+
+This allows us to write a representation of the hypergeometric representation of a given quantity when it is possible.
+
+** Factorial Function defined for all complex numbers (5.83)
+
+$\frac{1}{z!} = \lim_{n \to \infty} {n+z \choose n} n^{-z}$
+
+** Integral Definition of the Factorial Function (5.84)
+
+$z! = \int_0^{\infty} t^ze^{-t} dt$ if $\mathcal{R}(z) > - 1$
+
+** Gamma Function Formulation of Factorial (5.86, 5.87)
+
+$\Gamma(z + 1) = z!$
+
+$(-z)!\Gamma{(z)} = \frac{\pi}{\sin \pi z}$
+
+** Generalized Factorial Powers where $z, w \in \mathcal{C}$ (5.88, 5.89, 5.90)
+
+$z^{\underline{w}} = \frac{z!}{(z - w)!}$
+
+$z^{\overline{w}} = \frac{\Gamma(z + w)}{\Gamma(z)}$
+
+${z \choose w} = \lim_{\xi \to z} \lim_{\omega \to w} \frac{\xi!}{\omega!(\xi - \omega)!}$ where $z, w \in \mathcal{C}$
+
+** Vandermonde's Convolution in Hypergeometric Form (5.92)
+
+$F(a, b; c; 1) = \frac{\Gamma(c - a - b) \Gamma(c)}{\Gamma(c - a) \Gamma(c - b)}$
+
+when integer $b > 0$ or $\mathcal{R}c > \mathcal{R}a + \mathcal{R}b$
+otherwise the series doesn't converge
+
+** Kummer's Formula (5.94)
+
+$F(a, b; 1 + b - a; -1) = \frac{(b/2)!}{b!} (b - a)^{\underline{b/2}}$
+
+* Hypergeometric Transformations
+
+** Pfaff's Reflection Law (5.101)
+
+$\frac{1}{(1 - z)^a} F(a, b; c; \frac{-z}{1 - z}) = F(a, c-b; c; z)$
