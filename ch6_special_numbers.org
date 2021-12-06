@@ -1,0 +1,3 @@
+#+TITLE: Chapter 6: Special Numbers
+
+* Stirling Numbers

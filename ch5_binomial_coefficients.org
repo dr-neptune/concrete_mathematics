@@ -209,7 +209,6 @@ $n_i = n! \Sigma_{0 \leq k \leq n} \frac{(-1)^k}{k!}$
 $n_i = \left\lfloor{\frac{n!}{e} + \frac{1}{2}}\right\rfloor + [n = 0]$
 
 * 5.4 | Generating Functions
-
 ** Power Series (5.52)
 
 An infinite sequence $<a_0, a_1, a_2, ...>$ that we wish to deal with in some way can conveniently be represented as a power series in an auxiliary variable z,
@@ -369,3 +368,24 @@ $F(a, b; 1 + b - a; -1) = \frac{(b/2)!}{b!} (b - a)^{\underline{b/2}}$
 ** Pfaff's Reflection Law (5.101)
 
 $\frac{1}{(1 - z)^a} F(a, b; c; \frac{-z}{1 - z}) = F(a, c-b; c; z)$
+
+Skimmed a bunch about using hypergeometric transformations for differential equations
+
+* Partial Hypergeometric Sums
+
+most notably, Gosper's algorithm:
+
+Gosper's algorithm is a procedure for finding sums of hypergeometric terms that are themselves hypergeometric terms.
+That is: suppose one has $a(1) + ... + a(n) = S(n) − S(0)$, where $S(n)$ is a hypergeometric term (i.e., $S(n + 1)/S(n)$ is a rational function of n); then necessarily $a(n)$ is itself a hypergeometric term, and given the formula for $a(n)$ Gosper's algorithm finds that for $S(n)$.
+
+Step 1: Find a polynomial p such that, writing $b(n) = a(n)/p(n)$, the ratio $b(n)/b(n − 1)$ has the form $q(n)/r(n)$ where q and r are polynomials and no $q(n)$ has a nontrivial factor with $r(n + j)$ for $j = 0, 1, 2$, ... . (This is always possible, whether or not the series is summable in closed form.)
+
+Step 2: Find a polynomial ƒ such that $S(n) = q(n + 1)/p(n) f(n) a(n)$. If the series is summable in closed form then clearly a rational function ƒ with this property exists; in fact it must always be a polynomial, and an upper bound on its degree can be found. Determining ƒ (or finding that there is no such ƒ) is then a matter of solving a system of linear equations.
+
+* Mechanical Summation
+
+Gosper's algorithm finds a closed form for only a few of the binomial sums we meet in practice. Doron Zeilberger extended it, making it succeed in vastly more cases. This is called the Gosper-Zeilberger algorithm.
+
+
+#+DOWNLOADED: screenshot @ 2021-12-05 21:14:59
+[[file:Mechanical_Summation/2021-12-05_21-14-59_screenshot.png]]
