@@ -1,3 +1,32 @@
 #+TITLE: Chapter 6: Special Numbers
 
 * Stirling Numbers
+
+We use the notation:
+
+Stirling numbers of the first kind:
+
+${n \brack k}$
+
+where we are counting the number of ways to arrange n objects into k cycles instead of subsets.
+We can read this "n cycle k"
+
+Stirling numbers of the second kind:
+
+${n \brace k}$
+
+which stands for the number of ways to partition a set of n things into k nonempty subsets.
+We can read this as "n subset k"
+
+#+DOWNLOADED: screenshot @ 2021-12-06 08:33:42
+[[file:Stirling_Numbers/2021-12-06_08-33-42_screenshot.png]]
+
+** Closed Form for 2-subsets with Stirling Numbers of the Second Kind (6.2)
+
+${n \brace 2} = 2^{n - 1} - 1$
+
+** First Term Pull Out for Stirling Numbers of the Second Kind (6.3)
+
+${n \brace k} = k {n - 1 \brace k} + {n - 1 \brace k - 1}$
+
+This is how the table above was generated. Without the factor of k, it would reduce to the addition formula that generates Pascal's triangle.
