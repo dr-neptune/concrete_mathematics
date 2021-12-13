@@ -30,3 +30,36 @@ ${n \brace 2} = 2^{n - 1} - 1$
 ${n \brace k} = k {n - 1 \brace k} + {n - 1 \brace k - 1}$
 
 This is how the table above was generated. Without the factor of k, it would reduce to the addition formula that generates Pascal's triangle.
+
+* Harmonic Numbers
+
+** Harmonic Numbers
+$H_n = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + ... = \Sigma_{k=1}^n \frac{1}{k}$
+
+** Recurrence between Harmonic numbers and Stirling Numbers of the First Kind
+
+${n+1 \brack 2} = n! H_n$
+
+** Bounds for $H_n$
+
+$\frac{\left\lfloor \lg n \right\rfloor + 1}{2} < H_n < \left\lfloor \lg n \right\rfloor + 1$
+
+$\ln n < H_n < \ln n + 1$
+
+** Riemann's Zeta Function
+
+If $r > 1$, our harmonic numbers of order $r$ approach a limit as $n \to \infty$;
+
+$\zeta(r) = H_{\infty}^{(r)} = \Sigma_{k = 1}^n \frac{1}{k^r}$
+
+** Euler's Constant
+
+$\gamma = 0.5772156649$...
+
+$\lim_{n \to \infty}(H_n - \ln n) = \gamma$
+
+** Approximation to $H_n$
+
+$H_n = \ln n + \gamma + \frac{1}{2n} + \frac{1}{12n^2} + \frac{\epsilon_n}{120n^4}$, $0 < \epsilon_n < 1$
+
+* Harmonic Summation
