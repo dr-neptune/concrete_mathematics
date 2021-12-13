@@ -63,3 +63,41 @@ $\lim_{n \to \infty}(H_n - \ln n) = \gamma$
 $H_n = \ln n + \gamma + \frac{1}{2n} + \frac{1}{12n^2} + \frac{\epsilon_n}{120n^4}$, $0 < \epsilon_n < 1$
 
 * Harmonic Summation
+
+** Binomial Harmonic Sum
+
+$\Sigma_{0 \leq k < n} {k \choose m} H_k = {n \choose m + 1}{H_n - \frac{1}{m + 1}}$
+
+* Bernoulli Numbers
+
+** Formulation
+
+$S_m(n) = 0^m + 1^m + ... + (n - 1)^m = \Sigma_{k = 0}^{n - 1} k^m = \Sigma_0^n x^m \delta x$
+
+** Definition by Implicit Recurrence Relation
+
+$\Sigma_{j=0}^m {m+1 \choose j} B_j = [m=0]$ for all $m \geq 0$
+
+** Bernoulli Numbers are coefficients of the Power Series
+
+$\frac{z}{e^z - 1} = \Sigma_{n \geq 0}B_n \frac{z^n}{n!}$
+
+** Relationship Between Bernoulli Numbers and Stirling Numbers
+
+$\Sigma_k {n \brace k}{k \brack m} \frac{(-1)^{k - m}}{k} = \frac{1}{n} {n \choose m} B_{n - m} + [m = n - 1]$
+
+* Fibonacci Numbers
+
+** Recurrence Definition
+
+$F_0 = 0$
+$F_1 = 1$
+$F_n = F_{n - 1} + F_{n - 2}$
+
+** Cassini's Identity
+
+$F_{n + 1} F_{n - 1} - F_n^2 = (-1)^n$
+
+** Fibonacci Numbers Extension to Negative Number Line
+
+$F_{-n} = (-1)^{n - 1}F_n$
