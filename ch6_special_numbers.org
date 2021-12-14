@@ -132,3 +132,15 @@ $F_n = \frac{1}{\sqrt5}(\frac{1}{1 - \Phi z} - \frac{1}{1 - \hat{\Phi}z})$
 $F_n = \left\lfloor \frac{\Phi^n}{\sqrt 5} + \frac{1}{2}\right\rfloor = \frac{\Phi^n}{\sqrt 5}$ rounded to the nearest integer
 
 * Continuants
+
+** Continuant Polynomial
+
+$K_0() = 1$
+$K_1(x_1) = x_1$
+$K_n(x_1, ..., x_n) = K_{n - 1}(x_1, ..., x_{n - 1})x_n + K_{n - 2}(x_1, ..., x_{n - 2})$
+
+** Continuant Relation to Continued Fractions
+
+let $[a_0, ..., a_n]$ represent the continued fraction with $n$ terms.
+
+Then $[a_0, ..., a_n] = \frac{K(a_0, a_1, ..., a_n)}{K(a_1, ..., a_n)}$
