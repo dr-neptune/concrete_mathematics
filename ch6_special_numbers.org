@@ -101,3 +101,34 @@ $F_{n + 1} F_{n - 1} - F_n^2 = (-1)^n$
 ** Fibonacci Numbers Extension to Negative Number Line
 
 $F_{-n} = (-1)^{n - 1}F_n$
+
+** Zeckendorf's Theorem
+
+Let $j >> k \iff j \geq k + 2$
+
+Then every positive integer has a unique representation of the form
+
+$n = F_{k_1} + F_{k_2} + ... + F_{k_r}$ where $k_1 >> k_2 >> ... >> k_r >> 0$
+
+** Fibonacci Number System
+
+Any unique system of representation is a number system; therefore Zeckendorf's theorem leads to the *Fibonacci Number System*.
+We can represent any nonnegative integer n as a sequence of 0's and 1's, writing
+
+$n = (b_m b_{m - 1} ... b_2)_F \iff n = \Sigma_{k = 2}^m b_k F_k$
+
+This number system is something like binary (radix 2) notation, except that there are never 2 adjacent 1's.
+
+** Closed Form for Fibonacci Numbers
+
+$F(z) = \frac{z}{1 - z - z^2}$
+
+** Binet's (Euler's) Formula
+
+$F_n = \frac{1}{\sqrt5}(\frac{1}{1 - \Phi z} - \frac{1}{1 - \hat{\Phi}z})$
+
+** Another Closed Form
+
+$F_n = \left\lfloor \frac{\Phi^n}{\sqrt 5} + \frac{1}{2}\right\rfloor = \frac{\Phi^n}{\sqrt 5}$ rounded to the nearest integer
+
+* Continuants
