@@ -5,3 +5,48 @@
 Fun! A sequence of nontrivial problems solved with generating functions and some nice looking TeX
 
 * Basic Maneuvers
+
+Our generic generating function has the form
+
+$G(z) = g_0 + g_1z + g_2z^2 + ... = \Sigma_{n \geq 0} g_n z^n$
+
+** Additioin of Generating Functions
+
+$\alpha F(z) + \beta G(z) = \Sigma_n (\alpha f_n + \beta g_n)z^n$
+
+** Shifting
+
+To shift by m places to the *right*, simply muliply by z^m
+This way we form a generating function for the sequence $<0, 0, ..., 0, g_0, g_1, ...>$
+
+$z^m G(z) = \Sigma_n g_{n - m}z^n$
+
+To shift by m places to the *left* we subtract off the first m terms and then divide by z^m
+
+$\frac{1}{z^m} G(z) - (g_0 + g_1 z + ... + g_{m - 1}z^{m - 1}) = \Sigma_{n \geq 0} g_{n + m}z^n$
+
+** Constant Multiple
+
+$G(cz) = \Sigma_n g_n(cz)^n = \Sigma_n c^n g_n z^n$
+
+** Differentiation to bring down a factor (7.17)
+
+$G'(z) = \Sigma_n (n + 1) g_{n + 1}z^n$
+
+which we can shift to the right
+
+$z G'(z) = \Sigma_n n g_n z^n$
+
+** Integration lets us divide by n (7.19)
+
+$\int_0^z G(t) dt = \Sigma_{n \geq 1} \frac{1}{n} g_{n - 1} z^n$
+
+** Multiplication / Convolution (7.20)
+
+$F(z)G(z) = \Sigma_n ( \Sigma_k f_k g_{n - k})z^n$
+
+
+#+DOWNLOADED: screenshot @ 2021-12-15 12:45:47
+[[file:Basic_Maneuvers/2021-12-15_12-45-47_screenshot.png]]
+
+* Solving Recurrences
