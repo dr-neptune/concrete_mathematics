@@ -1,0 +1,7 @@
+#+TITLE: Chapter 7: Generating Functions
+
+* Domino Theory and Change
+
+Fun! A sequence of nontrivial problems solved with generating functions and some nice looking TeX
+
+* Basic Maneuvers
