@@ -62,4 +62,7 @@ $F(z)G(z) = \Sigma_n ( \Sigma_k f_k g_{n - k})z^n$
 
  $[z^n]R(z) = a_1\rho_1^n + ... + a_l\rho_l^n$ where $a_k = \frac{- \rho_k P(1 / \rho_k)}{Q'(1/\rho_k)}$
 
-* Special Generating Functions
+* Convolutions
+
+The *convolution* of two given sequences $<f_0, f_1, ...> = <f_n>$ and $<g_0, g_1, ...> = <g_n>$ is the sequence $<f_0g_0 + f_0g_1 + f_1 g_0 + ...> = <\Sigma_k f_k g_{n - k}>$
+Convolution of sequences corresponds to multiplication of their generating functions.
