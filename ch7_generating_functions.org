@@ -66,3 +66,21 @@ $F(z)G(z) = \Sigma_n ( \Sigma_k f_k g_{n - k})z^n$
 
 The *convolution* of two given sequences $<f_0, f_1, ...> = <f_n>$ and $<g_0, g_1, ...> = <g_n>$ is the sequence $<f_0g_0 + f_0g_1 + f_1 g_0 + ...> = <\Sigma_k f_k g_{n - k}>$
 Convolution of sequences corresponds to multiplication of their generating functions.
+
+** Raney's Lemma
+
+If <$x_1, x_2, ..., x_m$> is any sequence of integers whose sum is +1, exactly one of the cyclic shifts
+ <$x_1, x_2, ..., x_m$>, <$x_2, x_3, ..., x_m, x_1$>, ..., <$x_m, x_1, ..., x_{m-1}$>
+has all of its partial sums positive
+
+Pretty neat, we can make mountain tops this way lol
+
+* Exponential Generating Functions
+
+Sometimes a sequence <$g_n$> has a generating function whose properties are quite complicated, while the related sequence <$g_n / n!$> has a generating function that's quite simple. In such cases, we prefer to work with the latter and then multiply by n! at the end.
+
+** Exponential Generating Function
+
+$\hat{G(z)} = \Sigma_{n \geq 0} g_n \frac{z^n}{n!}$
+
+The name arises because the exponential function $e^z$ is the egf of <$1, 1, ..., 1$>
