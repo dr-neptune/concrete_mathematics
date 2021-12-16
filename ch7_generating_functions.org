@@ -50,3 +50,16 @@ $F(z)G(z) = \Sigma_n ( \Sigma_k f_k g_{n - k})z^n$
 [[file:Basic_Maneuvers/2021-12-15_12-45-47_screenshot.png]]
 
 * Solving Recurrences
+
+1. Write down a single equation that expresses $g_n$ in terms of other elements of the sequence. This equation should be valid for all integers n, assuming that $g_{-1} = g_{-2} = ... = 0$
+2. Multiply both sides of the equation by $z^n$ and sum over all n. This gives, on the left, the sum $\Sigma_n g_n z^n$, which is the generating function $G(z)$. The right-hand side should be manipulated so that it becomes some other expression involving $G(z)$
+3. Solve the resulting equation, getting a closed for for $G(z)$
+4. Expand $G(z)$ into a power series and read off the coefficient of $z^n$; this is a closed form for $g_n$
+
+** Rational Expansion Theorem for Distinct Roots
+
+ If $R(z) = P(z)/Q(z)$, where $Q(z) = q_0(1 - \rho_1 z)...(1 - \rho_lz)$ and the numbers $(\rho_1, ..., \rho_l)$ are distinct, and if $P(z)$ is a polynomial of degree less than $l$, then
+
+ $[z^n]R(z) = a_1\rho_1^n + ... + a_l\rho_l^n$ where $a_k = \frac{- \rho_k P(1 / \rho_k)}{Q'(1/\rho_k)}$
+
+* Special Generating Functions
