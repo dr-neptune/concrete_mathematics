@@ -79,8 +79,33 @@ Pretty neat, we can make mountain tops this way lol
 
 Sometimes a sequence <$g_n$> has a generating function whose properties are quite complicated, while the related sequence <$g_n / n!$> has a generating function that's quite simple. In such cases, we prefer to work with the latter and then multiply by n! at the end.
 
-** Exponential Generating Function
+* Exponential Generating Functions
 
 $\hat{G(z)} = \Sigma_{n \geq 0} g_n \frac{z^n}{n!}$
 
 The name arises because the exponential function $e^z$ is the egf of <$1, 1, ..., 1$>
+
+Differentiation gives the left-shift operation
+Integration gives the right-shift operation
+
+*** Binomial Convolution
+
+If $\hat{F}(z)$ and $\hat{G}(z)$ are egf's for <$f_n$> and <$g_n$>, then $\hat{F}(z)\hat{G}(z) = \hat{H}(z)$ is the egf for a sequence <$h_n$>, called the *binomial convolution* of $f_n$ and $g_n$:
+
+$h_n = \Sigma_k {n \choose k} f_k g_{n-k}$
+
+* Dirichlet Generating Functions
+
+There are many possible ways to generate a sequence from a series; any system of kernel functions $K_n(z)$ such that $\Sigma_n g_n K_n(z) = 0 \to g_n = 0 \forall n$
+
+** Dirichlet Generating Function
+
+The most important alternative to generating functions and exponential generating function uses the kernel $\frac{1}{n^z}$; it is intended for sequences <$g_1, g_2$, ...> that begin with n = 1 instead of n = 0:
+
+$\tilde{G}(z) = \Sigma_{n \geq 1} \frac{g_n}{n^z}$
+
+** Riemann Zeta Function
+
+The Dirichlet Generating Function for <1,1,...> is
+
+$\Sigma_{n \geq 1}\frac{1}{n^z} = \zeta(z)$
