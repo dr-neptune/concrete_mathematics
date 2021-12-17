@@ -1,0 +1,53 @@
+#+TITLE: Chapter 8: Discrete Probability
+
+* Definitions
+
+** Probability Space
+
+Probability space is a set $\Omega$ of all things that can happen in a given problem together with a rule that assigns a probability $P(\omega)$ to each elementary event $\omega \in \Omega$. The probability must be a non-negative number and the condition:
+
+$\Sigma_{\omega \in \Omega} P(w) = 1$
+
+must hold in every discrete probability space.
+
+** Probability of an Event
+
+The probability of an event A is defined by the formula
+
+$P(\omega \in A) = \Sigma_{\omega \in A} P(\omega)$
+
+** Independence of Random Variables
+
+We say that X and Y are independant random variables if
+
+$P(X = x$ and $Y = y) = P(X = x)\cdot P(Y = y)$
+
+for all x and y.
+
+** Expected Value
+
+$\mathbb{E}(X) = \Sigma_{\omega \in \Omega} X(\omega) P(\omega)$
+
+$\mathbb{E}(X + Y) = \mathbb{E}X + \mathbb{E}Y$
+
+$\mathbb{E}(\alpha X) = \alpha \mathbb{E}X$
+
+$\mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y)$ if X and Y are independent
+
+* Mean and Variance
+
+** Variance
+
+$\mathbb{V}[X] = \mathbb{E}([X - \mathbb{E}X]^2) = \mathbb{E}(X^2) - (\mathbb{E}X)^2$
+
+** Chebyshev's Inequality
+
+$P((X - \mathbb{E}X)^2 \geq \alpha) \leq \mathbb{V}X/\alpha$ for all $\alpha > 0$
+
+* Probability Generating Functions
+
+** mth moment of X
+
+$\mu_m = \Sigma_{k \geq 0} k^m P(X = k) = \mathbb{E}(X^m)$
+
+* Flipping Coins
