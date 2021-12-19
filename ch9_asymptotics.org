@@ -1,1 +1,33 @@
 #+TITLE: Chapter 9: Asymptotics
+
+* A Hierarchy
+
+** Asymptotic Growth Ratios
+
+$f(n) \prec g(n) \iff \lim_{n \to \infty} \frac{f(n)}{g(n)} = 0$
+
+* O Notation
+
+** O Notation
+
+This is used for upper bounds
+
+$f(n) = O(g(n))$ for all n implies that there is a constant C such that $|f(n)| \leq C|g(n)|$ for all n
+
+** $\Omega$ Notation
+
+This is used for lower bounds
+
+$f(n) = \Omega(g(n)) \iff |f(n)| \geq C |g(n)|$ for some $C > 0$
+
+** $\Theta$ Notation
+
+This is used for exact order of growth
+
+$f(n) = \Theta(g(n)) \iff f(n) = \Omega(g(n))$ and $f(n) = O(g(n))$
+
+* O Manipulation
+
+
+#+DOWNLOADED: screenshot @ 2021-12-18 20:34:27
+[[file:O_Manipulation/2021-12-18_20-34-27_screenshot.png]]
