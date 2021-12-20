@@ -28,6 +28,37 @@ $f(n) = \Theta(g(n)) \iff f(n) = \Omega(g(n))$ and $f(n) = O(g(n))$
 
 * O Manipulation
 
-
 #+DOWNLOADED: screenshot @ 2021-12-18 20:34:27
 [[file:O_Manipulation/2021-12-18_20-34-27_screenshot.png]]
+
+
+* Two Asymptotic Tricks
+
+** Bootstrapping
+
+The idea is to solve a recurrence asymptotically by starting with a rough estimate and plugging it into the recurrence. In this way, we can often derive better and better estimates, "pulling ourselves up by our boostraps".
+
+** Trading Tails
+
+1. First break the sum into 2 disjoint ranges $D_n$ and $T_n$. The summation over $D_n$ should be the dominant part, in the sense that is includes enough terms to determine the significant digits of the sum, when n is large. The summation over the range $T_n$ should just be the "tail" end, which contributes little to the overall total
+2. Find an asymptotic estimate $a_k(n) = b_k(n) + O(c_k(n))$ that is valid when $k \in D_n$. The O bound need not hold when $k \in T_n$
+3. Now prove that each of the following 3 sums is small
+   1. $\Sigma_a(n) = \Sigma_{k \in T_n}a_k(n)$
+   2. $\Sigma_b(n) = \Sigma_{k \in T_n}b_k(n)$
+   3. $\Sigma_c(n) = \Sigma_{k \in D_n}|c_k(n)|$
+
+If all 3 steps can be completed successfully, we have a good estimate:
+
+$\Sigma_{k \in D_n \cup T_n} a_k(n) = \Sigma_{k \in D_n \cup T_n} b_k(n) + O(\Sigma_a(n)) + O(\Sigma_b(n)) + O(\Sigma_c(n))$
+
+* Euler's Summation Formula
+
+** Euler's Summation Formula
+
+Ties everything together
+
+$\Sigma_{a \leq k < b} f(k) = \int_a^b f(x) dx + \Sigma_{k = 1}^m \frac{B_k}{k!} f^{(k - 1)}(x)|_a^b + R_m$
+
+where $R_m = (-1)^{m + 1}\int_a^b \frac{B_m(\{x\})}{m!} f^{(m)}(x) dx$
+
+where $a \leq b$, $m \geq 1$, $a,b,m \in \mathbb{Z}$
