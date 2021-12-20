@@ -62,3 +62,7 @@ $\Sigma_{a \leq k < b} f(k) = \int_a^b f(x) dx + \Sigma_{k = 1}^m \frac{B_k}{k!}
 where $R_m = (-1)^{m + 1}\int_a^b \frac{B_m(\{x\})}{m!} f^{(m)}(x) dx$
 
 where $a \leq b$, $m \geq 1$, $a,b,m \in \mathbb{Z}$
+
+* Final Summations
+
+A group of interesting examples solved using Euler's summation formula and associated tricks
